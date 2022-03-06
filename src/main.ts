@@ -20,6 +20,18 @@ declare module "@vue/runtime-core" {
         $prompt: typeof ElMessageBox.prompt;
     }
 }
+
+// type test<T = any> = {
+//     (): T;
+// }
+// 两个test等价
+// type test<T = any> = ()=>T
+
+// const testFn:test<string> = ()=>{
+//     return "123"
+// }
+
+
 // VueX d.ts 类型定义  vuex-shim.d.ts 
 // import { Store } from 'vuex' 
 // declare module '@vue/runtime-core' {
