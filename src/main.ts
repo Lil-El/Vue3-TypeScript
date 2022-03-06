@@ -20,3 +20,26 @@ declare module "@vue/runtime-core" {
         $prompt: typeof ElMessageBox.prompt;
     }
 }
+// VueX d.ts 类型定义  vuex-shim.d.ts 
+// import { Store } from 'vuex' 
+// declare module '@vue/runtime-core' {
+//     interface State {     
+//         count: number   
+//     }
+//     interface ComponentCustomProperties {
+//         $store: Store<State>   
+//     }
+// } 
+
+// Vue-Router d.ts 类型定义
+// declare module '@vue/runtime-core' {
+//     export interface ComponentCustomOptions {
+//       beforeRouteEnter?: any,
+//       beforeRouteUpdate?: any,
+//       beforeRouteLeave?: any,
+//     }
+//     export interface ComponentCustomProperties {
+//       $route: any,
+//       $router: any,
+//     }
+//   }
