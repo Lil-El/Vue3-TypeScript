@@ -11,9 +11,10 @@
         "sourceMap": true,
         "skipLibCheck": true,
         "resolveJsonModule": true,
+        "allowSyntheticDefaultImports": true,
         "esModuleInterop": true,
         "lib": ["esnext", "dom"],
-        "types": ["vite/client"], // 使用reference  或者 types引入
+        "types": ["webpack-env", "vite/client"], // vite/client使用reference  或者 types引入
         "paths": {
             "@/*": ["src/*"]
         }

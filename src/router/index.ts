@@ -50,6 +50,7 @@ const asyncRoutes: Array<RouteRecordRaw> = [
                 meta: {
                     title: "Menu Management",
                     icon: "list",
+                    hidden: true
                 },
             },
             {
@@ -66,6 +67,21 @@ const asyncRoutes: Array<RouteRecordRaw> = [
                 meta: {
                     title: "User Management",
                     icon: "list",
+                },
+            },
+        ],
+    },
+    {
+        // 外链路由
+        path: "/external-link",
+        component: Layout,
+        children: [
+            {
+                path: "https://www.baidu.com/",
+                redirect: "/",
+                meta: {
+                    title: "External Link",
+                    icon: "link",
                 },
             },
         ],
@@ -90,7 +106,7 @@ const constantRoutes: RouteRecordRaw[] = [
     },
 ];
 
-export const routes = [...constantRoutes, ...asyncRoutes]
+export const routes = [...constantRoutes, ...asyncRoutes];
 
 const router = vueRouter.createRouter({
     routes,

@@ -14,7 +14,8 @@
     "sass": "^1.49.8",
     "vue": "^3.2.25",
     "vue-router": "^4.0.12",
-    "vuex": "^4.0.2"
+    "vuex": "^4.0.2",
+    "tslib": "^2.2.0"
   },
   "devDependencies": {
     "@types/node": "^17.0.18",
