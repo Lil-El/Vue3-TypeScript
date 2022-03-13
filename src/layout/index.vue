@@ -1,29 +1,29 @@
 <template>
     <div class="app-wrapper">
         <div class="sidebar-container">
-            <Sidebar />
+            <side-bar />
         </div>
         <div class="main-container">
             <div class="header">
                 <div class="navbar">navbar</div>
-                <div class="tags-view">tagsview</div>
+                <div class="tags-view">tags view</div>
             </div>
-            <div class="app-main">
-                <h2>app main</h2>
-                <router-view></router-view>
-            </div>
+            <app-main />
         </div>
     </div>
 </template>
 
 <script lang="ts">
-import Sidebar from "../components/Sidebar/index.vue";
+import { defineComponent } from "vue";
+import SideBar from "../components/Sidebar/index.vue";
+import AppMain from "../components/AppMain/index.vue";
 
-export default {
+export default defineComponent({
     components: {
-        Sidebar,
+        SideBar,
+        AppMain,
     },
-};
+});
 </script>
 
 <style lang="scss" scoped>
@@ -49,7 +49,6 @@ export default {
         .app-main {
             /* 50= navbar  50  如果有tagsview + 34  */
             min-height: calc(100vh - 84px);
-            background: red;
         }
     }
 }
