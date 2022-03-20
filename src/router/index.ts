@@ -62,14 +62,15 @@ const asyncRoutes: Array<RouteRecordRaw> = [
                     icon: "list",
                 },
             },
-            // {
-            //     path: "user",
-            //     component: () => import(/* webpackChunkName: "user" */ "@/view/system/user/index.vue"),
-            //     meta: {
-            //         title: "User Management",
-            //         icon: "list",
-            //     },
-            // },
+            {
+                path: "user",
+                component: () => import(/* webpackChunkName: "user" */ "@/view/system/user/index.vue"),
+                meta: {
+                    title: "User Management",
+                    icon: "list",
+                    activeMenu: "/system/role" // NOTE: 某些场景下，点中某个菜单项时，让其他的菜单项高亮
+                },
+            },
         ],
     },
     {
