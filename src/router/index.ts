@@ -42,6 +42,7 @@ const asyncRoutes: Array<RouteRecordRaw> = [
         meta: {
             title: "System",
             icon: "lock",
+            alwaysShow: true,
         },
         children: [
             {
@@ -61,14 +62,14 @@ const asyncRoutes: Array<RouteRecordRaw> = [
                     icon: "list",
                 },
             },
-            {
-                path: "user",
-                component: () => import(/* webpackChunkName: "user" */ "@/view/system/user/index.vue"),
-                meta: {
-                    title: "User Management",
-                    icon: "list",
-                },
-            },
+            // {
+            //     path: "user",
+            //     component: () => import(/* webpackChunkName: "user" */ "@/view/system/user/index.vue"),
+            //     meta: {
+            //         title: "User Management",
+            //         icon: "list",
+            //     },
+            // },
         ],
     },
     {
