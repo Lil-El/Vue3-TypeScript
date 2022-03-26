@@ -18,4 +18,9 @@ const minoRequest = <T, V = any>(config: MINORequestConfig<T>) => {
     return request.request<MINOResponseConfig<V>>(config);
 };
 
+// 取消请求
+export const cancelRequest = (url: string | string[]) => {
+    return request.cancelRequest(url)
+}
+
 export default minoRequest;

@@ -108,8 +108,6 @@ class Request {
     }
 }
 
-// TODO: 测试部分
-
 export const request = new Request({
     method: "GET",
     baseURL: import.meta.env.BASE_URL,
