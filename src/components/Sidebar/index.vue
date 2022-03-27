@@ -46,7 +46,15 @@ export default defineComponent({
       return path
     })
     // scss变量
-    const scssVariables = computed(() => variables)
+    const scssVariables = computed(() => {
+        const cssVar: {[key: string]: string} = {};
+        variables.replace(":export", "").replace("{", "").replace("}", "").replace(";", "").split("\n").filter(item => item.trim()).map(item => {
+            const [key, value] = item.split(": ")
+            cssVar[key.trim()] = value;
+        })
+        return cssVar;
+    })
+    
     // 展开收起状态 稍后放store
     const isCollapse = ref(false)
 

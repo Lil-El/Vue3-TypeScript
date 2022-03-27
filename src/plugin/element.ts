@@ -1,11 +1,11 @@
 import { App } from "vue";
-import { ElButton, ElMessage, ElNotification, ElMessageBox, ElMenu, ElMenuItem, ElSubMenu } from "element-plus";
+import { ElButton, ElMessage, ElNotification, ElMessageBox, ElMenu, ElMenuItem, ElSubMenu, ElBreadcrumb, ElBreadcrumbItem } from "element-plus";
 import "element-plus/dist/index.css";
 
 export type Size = "default" | "medium" | "small" | "mini";
 
 export default (app: App): void => {
-    const components = [ElButton, ElMessage, ElNotification, ElMessageBox, ElMenu, ElMenuItem, ElSubMenu];
+    const components = [ElButton, ElMessage, ElNotification, ElMessageBox, ElMenu, ElMenuItem, ElSubMenu, ElBreadcrumb, ElBreadcrumbItem];
     components.forEach((component) => {
         app.component(component.name, component);
     });
