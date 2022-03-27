@@ -18,3 +18,6 @@ const fn:test<string> = ()=>{
 
 3. setup return 和 setup() 无return
    当template需要大量变量时使用无return；少的话就使用return的方式
+
+4. vuex持久化
+   vuex-persistedstate

@@ -6,7 +6,7 @@
         <div class="main-container">
             <div class="header">
                 <div class="navbar">
-                    <breadcrumb />
+                    <navbar />
                 </div>
                 <div class="tags-view">tags view</div>
             </div>
@@ -19,14 +19,14 @@
 import { defineComponent } from "vue";
 import SideBar from "../components/Sidebar/index.vue";
 import AppMain from "../components/AppMain/index.vue";
-import Breadcrumb from "@/components/Breadcrumb/index.vue";
+import Navbar from "@/components/Navbar/index.vue";
 
 export default defineComponent({
     components: {
-        SideBar,
-        AppMain,
-        Breadcrumb,
-    },
+    SideBar,
+    AppMain,
+    Navbar
+},
 });
 </script>
 
